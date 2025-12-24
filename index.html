@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Ayush Trivedi</title>
+  <!-- Inside <head> of index.html -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="icon" type="image/jpeg" href="assets/ghibli1.jpeg">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+<!-- 🔵 NAVBAR -->
+<header id="top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm px-4 fixed-top" id="mainNavbar">
+
+    <div class="container-fluid">
+      
+      <!-- LOGO / BRAND -->
+      <img src="assets/ghibli1.jpeg" class="nav-avatar" alt="Avatar">
+
+
+      <!-- MOBILE TOGGLER -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- NAV LINKS -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav top_menu">
+          <li class="nav-item"><a class="nav-link" href="#top">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#About-Me">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery-section">Photo Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <!-- RIGHT SOCIAL ICONS -->
+        <ul class="navbar-nav ms-auto nav-social">
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.linkedin.com/in/ayush-trivedi96/" target="_blank">
+              <img src="assets/linkedin.png" alt="LinkedIn" class="nav-icon">
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="https://github.com/Relostar-Devil" target="_blank">
+              <img src="assets/github.png" alt="GitHub" class="nav-icon">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.credly.com/users/ayush-trivedi.7394ec6b" target="_blank">
+              <img src="assets/Credly.png" alt="Credly" class="nav-icon">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://www.credential.net/profile/ayushtrivedi593056/wallet" target="_blank">
+              <img src="assets/accredible.png" alt="accredible" class="nav-icon">
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://public.tableau.com/app/profile/ayush.trivedi8469/vizzes" target="_blank">
+              <img src="assets/tableau.png" alt="accredible" class="nav-icon">
+            </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+
+<!-- 🔵 MOBILE NAV OFFCANVAS -->
+<!-- 🔵 MOBILE NAVBAR (VISIBLE ON SMALL SCREENS) -->
+<nav class="navbar navbar-light bg-white shadow-sm px-3 d-block d-lg-none">
+  <!-- Hamburger button -->
+  <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+    <i class="fas fa-bars fa-lg"></i>
+  </button>
+
+  <!-- Offcanvas Mobile Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#top">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#About-Me">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link" href="#portfolio">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#gallery-section">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/Relostar-Devil" target="_blank">
+          GitHub
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.linkedin.com/in/ayush-trivedi96/" target="_blank">
+          LinkedIn
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://public.tableau.com/app/profile/ayush.trivedi8469/vizzes" target="_blank">
+          Tableau Public
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.credly.com/users/ayush-trivedi.7394ec6b" target="_blank">
+          Credly
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="https://www.credential.net/profile/ayushtrivedi593056/wallet" target="_blank">
+          Accredible
+        </a>
+      </li>
+
+
+    </div>
+  </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <!-- background image layer, clipped -->
+  <div class="hero-bg"></div>
+
+
+  <!-- your card -->
+  <div class="hero-box">
+    <h1>Ayush Trivedi</h1>
+    <p>Data Scientist @ CVS Health | Woman in Tech</p>
+    <p><strong>Business Analytics, ASU • W.P. Carey, MSU Law School • Engineering at MIT</strong></p>
+    <a class="btn" href="#portfolio">Portfolio</a>
+  </div>
+</section>
+
+
+
+
+<!-- About Me Section -->
+<section id="About-Me" class="about-section py-5">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Text Column -->
+      <div class="col-lg-6 mb-4 mb-lg-0">
+        <h2 class="section-title">About Me</h2>
+        <p>I am a data science–oriented analytics professional with experience working across machine learning, business analytics, and applied data science. My work focuses on using data to build predictive insights, improve decision-making, and solve complex problems through structured analysis and modeling.</p>
+        <p>I completed my Master of Science in Business Analytics from the W. P. Carey School of Business at Arizona State University, building a strong foundation in statistics, machine learning, and analytics strategy. This was shaped by my undergraduate training in engineering and complemented by formal legal studies, which together strengthened my quantitative thinking and analytical rigor.</p>
+        <p>With extensive experience in Data Science, Analytics, Machine Learning, and Marketing Research, I work closely with machine learning models and real-world datasets to derive meaningful insights and drive outcomes. My work involves building and evaluating models using techniques such as regression, classification, clustering, forecasting, and natural language processing, while leveraging Python and SQL to work across structured and unstructured data. I focus on developing solutions that are both technically sound and practically impactful.</p>
+        <p>My passion lies in data and technology-driven companies, and I am enthusiastic about leveraging my skills to make impactful contributions in this dynamic field. As a Data Professional, I am committed to advancing my expertise and contributing to the tech industry.</p>
+        <p>Let's connect and explore how data and technology can transform our world!</p>
+        <a href="#contact" class="btn btn-outline-primary mt-3">Connect with me!</a>
+      </div>
+      
+
+      <!-- About-me Photo -->
+      <!-- replace your current <div class="col-lg-6 …">…<img>…</div> with: -->
+      <div class="col-lg-6 d-flex justify-content-end">
+        <div class="about-image-wrapper">
+          <img
+            src="assets/Profile.jpg"
+            alt="Profile Photo"
+            class="about-image"
+          />
+        </div>
+      </div>
+
+
+
+
+      
+    </div>
+  </div>
+</section>
+
+<!-- 🔵 EXPERIENCE SECTION -->
+<!-- 🔵 PAST EXPERIENCE SECTION (HTML ONLY) -->
+<section id="experience" class="experience-section text-center">
+  <div class="container">
+    
+    <h2 class="section-title">Experience</h2>
+
+    <div class="row justify-content-center g-3">
+      <!-- ASU -->
+      <div class="col-6 col-md-4 col-lg-2">
+       <div class="exp-item">
+    
+        <div class="logo-box">
+         <img src="assets/Company_logo1.jfif" alt="ASU" class="exp-logo" />
+        </div>
+
+        <h5><b>W.P. Carey School of Business</b></h5>
+        <p>Graduate Research Assistant</p>
+        <p><b>Data Scientist</b></p>
+        <p>Tempe, AZ</p>
+
+    </div>
+  </div>
+
+
+      <!-- MedAire -->
+      <div class="col-6 col-md-4 col-lg-2">
+       <div class="exp-item">
+
+        <div class="logo-box">
+         <img src="assets/Company_logo2.jfif" alt="MedAire" class="exp-logo" />
+        </div>
+
+        <h5><b>MedAire</b></h5>
+        <p>ASU Capstone Project</p>
+        <p><b>Data Analyst</b></p>
+        <p>Phoenix, AZ</p>
+
+       </div>
+      </div>
+
+
+      <!-- PhysicsWallah -->
+      <div class="col-6 col-md-4 col-lg-2">
+       <div class="exp-item">
+
+        <div class="logo-box">
+         <img src="assets/Company_logo3.jpg" alt="PhysicsWallah" class="exp-logo" />
+        </div>
+
+        <h5><b>Physics Wallah</b></h5>
+        <p>Central Analytics Team</p>
+        <p><b>Analyst, Associate</b></p>
+        <p>Vadodara, India</p>
+
+       </div>
+      </div>
+
+
+      <!-- Merkle Sokrati (dentsu) -->
+      <div class="col-6 col-md-4 col-lg-2">
+       <div class="exp-item">
+
+        <div class="logo-box">
+         <img src="assets/Company_logo4.jfif" alt="Merkle Sokrati (dentsu)" class="exp-logo" />
+        </div>
+
+        <h5><b>Merkle Sokrati (dentsu)</b></h5>
+        <p>Digital Marketing Team</p>
+        <p><b>Associate Business Analyst</b></p>
+        <p>Pune, India</p>
+
+       </div>
+      </div>
+
+
+      <!-- IIT Kanpur -->
+      <div class="col-6 col-md-4 col-lg-2">
+       <div class="exp-item">
+
+        <div class="logo-box">
+         <img src="assets/Company_logo5.png" alt="IIT Kanpur" class="exp-logo" />
+        </div>
+
+        <h5><b>Indian Institute of Technology</b></h5>
+        <p>DS - AI - ML Team</p>
+        <p><b>Artificial Intelligence Intern</b></p>
+        <p>Kanpur, India</p>
+
+       </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Right-side ribbon (structure only; animated by your CSS) -->
+  <svg class="exp-ribbon" viewBox="0 0 420 1000" aria-hidden="true">
+    <defs>
+      <linearGradient id="ribbonStroke" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%"  stop-color="#42617f" stop-opacity="0.95"/>
+        <stop offset="100%" stop-color="#42617f" stop-opacity="0.45"/>
+      </linearGradient>
+
+      <path id="strand"
+            d="M80 0
+               C 190 -40, 250 210, 320 140
+               S 410 300, 250 420
+               S 90 620, 250 760
+               S 420 880, 200 1000" />
+    </defs>
+
+    <g class="ribbon-bundle">
+      <use href="#strand" transform="translate(-28,0)" />
+      <use href="#strand" transform="translate(-20,0)" />
+      <use href="#strand" transform="translate(-12,0)" />
+      <use href="#strand" transform="translate(-6,0)" />
+      <use href="#strand" transform="translate(0,0)" />
+      <use href="#strand" transform="translate(6,0)" />
+      <use href="#strand" transform="translate(12,0)" />
+      <use href="#strand" transform="translate(20,0)" />
+      <use href="#strand" transform="translate(28,0)" />
+    </g>
+  </svg>
+</section>
+
+
+<!-- ==============================
+     ODOO-STYLE PORTFOLIO SECTION
+     Pure HTML + CSS (Bootstrap optional)
+     - 12-col CSS Grid with irregular spans
+     - Background SVG shape layer
+     - Image+Card tiles with icon links
+     - Replace IMAGE/LINK placeholders with yours
+     ============================== -->
+<!-- ======= PORTFOLIO (2 big + 3 small) ======= -->
+<section id="portfolio" class="portfolio-section">
+  <h2 class="section-title">My Portfolio</h2>
+  <div class="portfolio-top-wrapper">
+  <!-- Decorative wave -->
+    <div class="portfolio-waves">
+      <svg viewBox="0 0 1440 160" preserveAspectRatio="none">
+    
+    <!-- Dark main wave -->
+        <path
+          d="M0,80
+             C240,0 480,160 720,80
+             C960,0 1200,160 1440,80"
+          fill="none"
+          stroke="#1b3645"
+          stroke-width="2.6"
+        />
+
+    <!-- Mid wave -->
+        <path
+          d="M0,100
+             C240,20 480,180 720,100
+             C960,20 1200,180 1440,100"
+          fill="none"
+          stroke="#9aa7b2"
+          stroke-width="2"
+          opacity="0.85"
+        />
+
+    <!-- Light wave -->
+        <path
+          d="M0,120
+             C240,40 480,200 720,120
+             C960,40 1200,200 1440,120"
+          fill="none"
+          stroke="#cfd8dc"
+          stroke-width="1.6"
+          opacity="0.75"
+        />
+
+      </svg>
+    </div>
+
+
+
+
+  <!-- ===== TOP ROW (2 BIG CARDS, CENTERED) ===== -->
+    <div class="portfolio-top">
+      <article class="card top-card">
+        <div class="card__media">
+          <img src="assets/MedAire.jpg" alt="MedAire project">
+        </div>
+
+        <h3 class="card__title">Rolling Revenue Forecasting & Scenario Modeling</h3>
+        <p class="card__kicker"><strong>FP&A Analytics & Forecasting for</strong>
+        <img class="logo-inline" src="assets/MedAire-logo.jpg" alt="MedAire"></p>
+
+        <p class="card__desc"><i>Built a dynamic forecasting model integrating contractual and transactional revenue to improve financial planning, risk visibility, and scenario-based decision making.</i></p>
+
+        <div class="card__footer">
+          <div class="links">
+            
+            <a href="https://www.linkedin.com/feed/update/urn:li:activity:7326389843712729088/"><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+          <div class="badges">
+            <img src="assets/PowerBI-logo.png" alt="PowerBI" class="tech-logo">
+            <img src="assets/Python-logo.png" alt="Python" class="tech-logo">
+          </div>
+        </div>
+      </article>
+
+      <article class="card top-card">
+        <div class="card__media">
+          <img src="assets/MU.png" alt="">
+        </div>
+
+        <h3 class="card__title">Real-Time Queue Monitoring & Wait-Time Intelligence</h3>
+        <p class="card__kicker"><strong>Data Science for</strong>
+        <img class="logo-inline" src="assets/download.jfif" alt="ASU"></p>
+
+        <p class="card__desc">
+          <i>Live queue and wait-time intelligence to improve campus dining experience and operations.</i>
+        </p>
+
+        <div class="card__footer">
+          <div class="links">
+            <a href="https://github.com/Relostar-Devil/Real-Time-Queue-Monitoring-at-ASU-Campus-Eateries-using-Computer-Vision-YOLOv8"><i class="fa-brands fa-github"></i></a>
+          </div>
+          <div class="badges">
+            <img src="assets/aws.png" alt="AWS" class="tech-logo">
+            <img src="assets/Python-logo.png" alt="Python" class="tech-logo">
+            <img src="assets/ultralytics.jfif" alt="YOLO" class="tech-logo">
+            
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+
+  <!-- ===== BOTTOM ROW (4 SMALLER, FULL WIDTH) ===== -->
+  <div class="portfolio-bottom">
+    
+    <article class="card">
+      <div class="card__media">
+        <img src="assets/uber.png" alt="">
+      </div>
+
+      <h3 class="card__title">Operational & Revenue Performance Analysis</h3>
+      <p class="card__kicker"><strong>Operations & Revenue Analytics</strong></p>
+      <p class="card__desc">
+        <i>Identified revenue leakage, cancellation drivers, and city-level inefficiencies for <img class="logo-inline" src="assets/uber1.png" alt="uber"> through SQL-based analysis.</i>
+      </p>
+      <div class="card__footer">
+        <div class="links">
+          
+          <a href="https://github.com/Relostar-Devil/Analysis-of-Uber-Operational-Data"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <div class="badges">
+          <img src="assets/mysql.png" alt="MySQL" class="tech-logo">
+          <img src="assets/database.png" alt="Database" class="tech-logo">
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card__media">
+        <img src="assets/deepl.png" alt="">
+      </div>
+
+      <h3 class="card__title">Visual Intelligence System for Object Recognition</h3>
+      <p class="card__kicker"><strong>ML & Deep Learning</strong></p>
+      <p class="card__desc"><i>Developed a deep learning–based object recognition system for multi-class image classification.</i></p>
+      <div class="card__footer">
+        <div class="links"><a href="https://github.com/Relostar-Devil/Recognition-of-Objects-using-Neural-Networks"><i class="fa-brands fa-github"></i></a></div>
+        <div class="badges"><img src="assets/Python-logo.png" alt="Python" class="tech-logo"></div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card__media">
+        <img src="assets/doe.png" alt="">
+      </div>
+
+      <h3 class="card__title">Automated Credit Score Classification System</h3>
+      <p class="card__kicker"><strong>Machine Learning & Risk Analytics</strong></p>
+      <p class="card__desc"><i>Automated credit score classification into risk tiers to support scalable financial decision-making.</i>
+        
+      </p>
+      <div class="card__footer">
+        <div class="links"><a href="https://github.com/Relostar-Devil/Credit-Score"><i class="fa-brands fa-github"></i></a></div>
+        <div class="badges">
+          <img src="assets/stats2.svg" alt="Statsmodels" class="tech-logo">
+          <img src="assets/Python-logo.png" alt="Python" class="tech-logo">
+        </div>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="card__media">
+        <img src="assets/market.png" alt="">
+      </div>
+
+      <h3 class="card__title">Brand Positioning & Customer Segmentation Strategy</h3>
+      <p class="card__kicker"><strong>Marketing Analytics & Customer Segmentation</strong></p>
+      <p class="card__desc">
+        <i>Identified customer segments and competitive positioning for <img class="logo-inline" src="assets/BBW.png" alt="bbw"> to inform data-driven retail marketing strategy.</i>
+      </p>
+      <div class="card__footer">
+        <div class="links"><a href="https://github.com/Relostar-Devil/Bath-Body-Works-Marketing-Analytics-and-Segmentation"><i class="fa-brands fa-github"></i></a></div>
+        
+      </div>
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- 🔵 PARALLAX STRIP -->
+<section class="parallax-section">
+  <div class="parallax-image"></div>
+</section>
+
+<!-- 🔵 Skills Section -->
+<section class="skills-banner-section">
+  
+  <!-- Heading -->
+  <h2 class="skills-heading">Technical Skills</h2>
+<br>
+  <!-- Image container -->
+  <div class="skills-banner-wrapper">
+    <img src="assets/skills-banner.png" alt="Languages and Tools" class="skills-banner-img">
+  </div>
+
+</section>
+
+
+
+<!-- 🔵 GALLERY SECTION -->
+<section id="gallery-section" class="gallery-container">
+  <h2 class="gallery-heading">Some of my wonderful experiences captured in images!</h2>
+
+  <div class="masonry">
+    
+    <div class="masonry-column">
+      <img src="assets/gallery1.jpeg" alt="">
+      <img src="assets/gallery2.jpeg" alt="">
+      <img src="assets/gallery3.jpeg" alt="">
+      <img src="assets/gallery4.jpeg" alt="">
+    </div>
+
+    <div class="masonry-column">
+      <img src="assets/gallery5.jpeg" alt="">
+      <img src="assets/gallery6.jpeg" alt="">
+      <img src="assets/gallery7.jpeg" alt="">
+      <img src="assets/gallery8.jpg" alt="">
+    </div>
+
+    <div class="masonry-column">
+      <img src="assets/gallery9.jpg" alt="">
+      <img src="assets/gallery10.jpg" alt="">
+      <img src="assets/gallery11.jpg" alt="">
+      <img src="assets/gallery12.jpg" alt="">
+    </div>
+
+  </div>
+</section>
+
+<!-- EXACT FOOTER -->
+<footer id="contact" class="footer-main">
+  <div class="footer-content">
+
+    <!-- Left block -->
+    <div class="footer-left">
+      <img src="assets/ghibli1.jpeg" alt="Avatar" class="footer-avatar">
+
+      <div class="footer-text">
+        <p class="footer-email">
+          atrive28@asu.edu | ayushtriv96@gmail.com
+        </p>
+
+        <div class="footer-icons">
+          <a href="https://www.linkedin.com/in/ayush-trivedi96/" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/Relostar-Devil" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom strip -->
+  <div class="footer-bottom footer-center">
+  <span>Made with ❤️ and 💪 by Ayush Trivedi</span>
+</div>
+</footer>
+
+
+
+<!-- 🔵 SCROLL-TO-TOP BUTTON -->
+<button id="scrollTopBtn" class="btn btn-primary position-fixed bottom-0 end-0 m-4 rounded-circle" style="display: none;">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+  <!-- Your custom script -->
+  <script src="script.js" defer></script>
+
+  <!-- ✅ Bootstrap 5 JS (must be last) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>

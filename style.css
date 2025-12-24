@@ -1,0 +1,973 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #193655;
+}
+
+#mainNavbar {
+  transition: transform 0.35s ease-in-out;
+}
+
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+/* NAVBAR */
+/* Logo Style */
+
+.nav-avatar {
+  height: 40px;
+  width: auto;
+  object-fit: cover;
+
+  margin-left: 75px;   /* 👈 moves avatar to the right */
+  margin-right: 32px;  /* space between avatar and Home */
+}
+
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1b3645 !important;
+  text-transform: uppercase;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;          /* 👈 makes it sharper */
+  font-size: 15.5px;         /* 👈 slightly tighter */
+  letter-spacing: 0.2px;     /* 👈 reduces airy look */
+  color: #1b3645 !important; /* darker, clearer */
+  
+}
+
+
+.nav-social .nav-link {
+  padding: 0 10px;       /* horizontal spacing only */
+  display: flex;
+  align-items: center;
+}
+
+/* Right-side social icons container */
+.nav-social {
+  display: flex;
+  align-items: center;   /* prevents height increase */
+}
+
+/* Image logos */
+.nav-icon {
+  height: 2rem;          /* EXACT equivalent of font-size: 2rem */
+  width: auto;
+  object-fit: contain;
+  display: block;
+  opacity: 0.85;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.nav-icon:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+
+.navbar-nav .nav-link:hover {
+  color: #f26a8d !important;
+}
+
+
+
+/* Prevent overlap on scroll */
+section {
+  scroll-margin-top: 80px;
+}
+
+/* HERO SECTION */
+/* container for the hero */
+.hero {
+  position: relative;
+  overflow: visible;
+  min-height: 110vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 150px;
+  /* shrink this a bit so the slice isn’t huge */
+  padding-bottom: 00px;
+}
+
+/* the clipped background image */
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("assets/asu1.jpg") center/cover no-repeat;
+  /* diagonal cut: bottom edge runs from 40% across up to 60% across */
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 75%);
+  z-index: 2;
+}
+
+/* your white card */
+.hero-box {
+  position: relative;
+  z-index: 2;            /* sits above the clipped image */
+  margin-top: 110px;     /* pull it up into the slant */
+  background: white;
+  width: 42%;
+  left: -20%;
+  padding: 30px;
+  border-radius: 5px;
+  height: 250px;
+  max-width: 1900px;
+  border: 1px solid rgba(196, 22, 22, 0.76);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ===== HERO CARD TEXT STYLING (MATCH REFERENCE CARD) ===== */
+
+.hero-box h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 65px;
+  font-weight: 300;
+  line-height: 1.55;     /* ← vertical compactness */
+  letter-spacing: 0.2px;
+  color: #1b3645;
+  margin-bottom: 0px;
+}
+
+.hero-box p {
+  font-family: 'Poppins', sans-serif;
+  color: #1b3645;
+  line-height: 1.5;      /* ← controls vertical spacing */
+  margin-bottom: 12px;
+ 
+}
+
+/* Role line */
+.hero-box p:nth-of-type(1) {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.5;        /* height of role line */
+  margin-bottom: 14px;    /* 👈 space BELOW role */
+  color: #1b3645;
+}
+
+/* Education / credentials line */
+.hero-box p:nth-of-type(2) {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: -10px;   
+  margin-bottom: 15px;    /* 👈 space BEFORE button */
+  color: #1b3645;
+}
+
+/* Portfolio button */
+.hero-box .btn {
+  display: inline-block;
+  margin-top: -1px;
+  padding: 4px 15px;
+  border-radius: 24px;
+  margin-left: -5px;
+  background-color: #1b3645;
+  color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  border: none;
+
+  box-shadow: 0 6px 14px rgba(27, 54, 69, 0.25); /* 👈 depth */
+  transition: all 0.25s ease;
+}
+
+.hero-box .btn:hover {
+  background-color: #1b3645;
+}
+
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: white;
+  clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0 100%);
+  border-top: 1px solid #cfd8dc;
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+/* FOO*/
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #1b3645;
+  line-height: 1.6;
+}
+
+h2 {
+  color: #1b3645;
+}
+
+.bg-overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 8px;
+}
+.parallax-strip {
+  background-image: url('assets/parallax.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  min-height: 300px;
+}
+.gallery-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+#scrollTopBtn {
+  z-index: 999;
+  width: 45px;
+  height: 45px;
+  font-size: 16px;
+  display: none;
+}
+
+footer {
+  font-size: 0.95rem;
+}
+
+/* About Me Section */
+/* Pull the about section up under the cut */
+#About-Me,
+.about-section {
+  margin-top: -120px;          /* pulls About section upward */
+  padding-top: 0;
+  padding-bottom: 90px;
+  background-color: #ffffff;
+  color: #1b3645;
+  position: relative;
+  z-index: 3;
+}
+
+/* ===== ABOUT ME TYPOGRAPHY (MATCH HERO BOX FONT) ===== */
+.about-section {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* About Me heading */
+.about-section .section-title {
+  font-size: 2rem;
+  font-weight: 500;        /* slightly lighter = matches hero */
+  letter-spacing: 0.3px;
+  margin-bottom: 28px;
+}
+
+/* About Me paragraphs */
+.about-section p {
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 400;        /* clean body weight */
+  letter-spacing: 0.15px;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+/* ABOUT “HOLLOW BLO B” BEHIND PHOTO */
+/* 1. Container for the blob + image */
+.about-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;      /* adjust to suit */
+  margin: 0 auto;
+}
+.about-section .row {
+  align-items: center;
+}
+
+/* 2. The navy “blob” behind */
+.about-image-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #193655;
+  border-radius: 50% 50% 40% 60% / 60% 40% 50% 50%;
+  z-index: 1;
+}
+
+/* 3. The white “cut-out” mask */
+.about-image-wrapper::after {
+  content: "";
+  position: absolute;
+  /* inset by 10% on every side to reveal a thick ring */
+  top: 0;   left: 0;
+  width: 80%; height: 80%;
+  background: rgb(128, 12, 12);
+  /* match the exact same shape */
+  border-radius: 50% 50% 40% 60% / 60% 40% 50% 50%;
+  z-index: 2;
+}
+
+/* 4. Your actual photo, on top */
+.about-image {
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 50% 50% 40% 60% / 60% 40% 50% 50%;
+  object-fit: cover;
+  z-index: 3;
+}
+
+
+/* Experience Section */
+
+/* Darker backdrop for Experience (one step darker than #193655) */
+/* Parent section must be positioned for absolute placement */
+
+
+/* --- Experience section base --- */
+.experience-section {
+  position: relative;          /* so the ribbon can be absolutely positioned inside */
+  background-color: #193655;   /* your blue */
+  overflow: hidden;            /* keep the ribbon inside the section edges */
+  padding-top: 2rem;   /* increase top space */
+  padding-bottom: 7rem; /* increase bottom space */
+}
+/* Make the experience section a positioning context */
+
+/* Right-side ribbon placement */
+.exp-ribbon {
+  position: absolute;
+  right: 20px;             /* push slightly outside so curves look natural */
+  top: -8%;
+  height: 125%;
+  width: auto;
+  pointer-events: none;      /* never block clicks */
+  opacity: 0.8;              /* overall transparency */
+}
+
+/* Animate each strand */
+.exp-ribbon .ribbon-bundle use {
+  fill: none;
+  stroke: rgba(66, 97, 127, 0.35);  /* soft blue, matches your theme */
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  /* animation magic */
+  stroke-dasharray: 1200;           /* length "units" of each path */
+  stroke-dashoffset: 1200;          /* start “hidden” */
+  animation: ribbonDraw 12s linear infinite;
+}
+
+/* slight staggering so the lines don’t move in sync */
+.exp-ribbon .ribbon-bundle use:nth-child(1) { animation-delay: 0s; }
+.exp-ribbon .ribbon-bundle use:nth-child(2) { animation-delay: 0.3s; }
+.exp-ribbon .ribbon-bundle use:nth-child(3) { animation-delay: 0.6s; }
+.exp-ribbon .ribbon-bundle use:nth-child(4) { animation-delay: 0.9s; }
+.exp-ribbon .ribbon-bundle use:nth-child(5) { animation-delay: 1.2s; }
+.exp-ribbon .ribbon-bundle use:nth-child(6) { animation-delay: 1.5s; }
+.exp-ribbon .ribbon-bundle use:nth-child(7) { animation-delay: 1.8s; }
+.exp-ribbon .ribbon-bundle use:nth-child(8) { animation-delay: 2.1s; }
+.exp-ribbon .ribbon-bundle use:nth-child(9) { animation-delay: 2.4s; }
+
+/* draw/flow animation */
+@keyframes ribbonDraw {
+  0%   { stroke-dashoffset: 1200; }
+  100% { stroke-dashoffset: -1200; }
+}
+
+
+/* ===== EXPERIENCE TYPOGRAPHY ===== */
+.experience-section .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;        /* same as About Me */
+  font-weight: 400;       /* same weight */
+  letter-spacing: 0;      /* About Me has no extra spacing */
+  margin-bottom: 28px;    /* same spacing */
+  color: #ffffff;         /* white for dark background */
+  text-align: center;
+}
+
+
+/* ===== EXPERIENCE HEADING ===== */
+.experience-section h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* ===== EXPERIENCE ITEM WRAPPER ===== */
+/* ===== HARD ALIGNMENT FIX FOR EXPERIENCE CARDS ===== */
+
+.exp-item {
+  display: grid;
+  grid-template-rows:
+    auto   /* logo */
+    48px   /* company name */
+    36px   /* team / project */
+    56px   /* role */
+    32px;  /* location */
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+
+
+/* ===== COMPANY NAME ===== */
+/* ===== COMPANY NAME (LOCK HEIGHT) ===== */
+.exp-item h5 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+/* ===== ROLE / TEAM ===== */
+/* ===== ROLE / TEAM (PERFECTLY ALIGNED) ===== */
+.exp-item p:not(.small) {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.35;
+
+  min-height: 56px;        /* 🔑 increased for 2-line roles */
+  max-height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.2px;
+  margin: 0 0 6px 0;
+  text-align: center;
+}
+
+
+
+/* ===== DATE / LOCATION ===== */
+/* ===== LOCATION ===== */
+.exp-item p.small {
+  font-size: 13.5px;
+  opacity: 0.85;
+
+  min-height: 36px;
+  max-height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== FORCE PERFECT ROW ALIGNMENT ===== */
+
+/* Company name */
+.exp-item h5 {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Team / Project line */
+.exp-item p:nth-of-type(1) {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ROLE TITLE (THIS IS THE PROBLEM LINE) */
+.exp-item p:nth-of-type(2) {
+  min-height: 56px;          /* 🔑 fixes AI Intern misalignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+/* ===== LOGO BOX (FIXES ALL ALIGNMENT ISSUES) ===== */
+.logo-box {
+  height: 96px;                 /* 🔑 same space for all logos */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-logo {
+  max-height: 120px;             /* visual size of logo */
+  max-width: 80%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Location */
+.exp-item p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.exp-item p.small {
+  font-size: 13.5px;
+  opacity: 0.85;
+}
+
+
+/* ===== Base look to match your screenshot ===== */
+:root{
+  --ink:#0b345c;       /* deep blue for headings */
+  --card:#ffffff;
+  --muted:#444;
+  --radius:16px;
+  --shadow:0 10px 24px rgba(0,0,0,.06);
+}
+
+.folio{padding:32px 0 60px;background:#f7f9fc;}
+.folio__title{font-weight:800;text-align:center;margin:0 0 24px;color:var(--ink);}
+
+/* 12-col grid with manual row spans (for 2 big + 3 small) */
+.folio__grid{
+  display:grid;
+  grid-template-columns:repeat(12,minmax(0,1fr));
+  grid-auto-rows:10px;            /* controls vertical rhythm */
+  gap:24px;
+}
+
+/* Spans: big cards vs small cards */
+.span-6x12{grid-column:span 6; grid-row:span 12;}
+.span-4x8 {grid-column:span 4; grid-row:span 8;}
+
+
+
+/* Media (top image) */
+.card__media{
+  border-radius:12px;
+  overflow:visible;
+  aspect-ratio:16/11;             /* keeps a tidy crop like your shot */
+  margin-bottom:16px;
+}
+.card__media img{
+  width:100%; height:100%; object-fit:cover;
+}
+
+.card__title{font-size:1.5rem;line-height:1.25;margin:0 0 6px;color:var(--ink);}
+.card__kicker{margin:0 0 4px;color:#0b345c;font-weight:700;}
+.card__desc{color:var(--muted);margin:0 0 10px;}
+
+/* Inline partner logo */
+.logo-inline{height:28px;vertical-align:middle;margin:0 0 10px 6px;}
+
+/* Footer stays at the bottom */
+.card__footer{
+  margin-top:auto;                 /* pushes footer down */
+  display:flex;justify-content:space-between;align-items:center;gap:12px;
+}
+.card__footer .links a{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:36px;height:36px;border-radius:8px;border:1px solid #e6edf5;
+}
+.card__footer .links i{font-size:18px;color:var(--ink);}
+.card__footer .badges img{height:28px;margin-left:8px;}
+
+/* Responsive */
+@media (max-width: 1024px){
+  .folio__grid{grid-template-columns:repeat(6,1fr);}
+  .span-6x12{grid-column:span 6;}
+  .span-4x8 {grid-column:span 3;}
+}
+@media (max-width: 680px){
+  .folio__grid{grid-template-columns:repeat(1,1fr);grid-auto-rows:auto;}
+  .span-6x12,.span-4x8{grid-column:span 1;grid-row:auto;}
+  .card__media{aspect-ratio:16/10;}
+}
+
+/* ————————————————
+   GENERAL PAGE LAYOUT
+——————————————— */
+/* ================================
+   PORTFOLIO SECTION BASE
+================================ */
+.portfolio-section {
+  position: relative;
+  width: 100%;
+  padding-top: 50px;      /* space from Experience */
+  padding-bottom: 80px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* ================================
+   PORTFOLIO HEADING
+================================ */
+.portfolio-section .section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  text-align: center;
+  color: #1b3645;
+  margin-bottom: 10px;    /* tight gap before waves */
+}
+
+/* ================================
+   WAVES (BACKGROUND LAYER)
+================================ */
+.portfolio-waves {
+  position: absolute;
+  top: 95px;              /* controls distance from heading */
+  left: 0;
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.portfolio-waves svg {
+  position: absolute;
+  width: 200%;            /* infinite look */
+  height: 100%;
+  animation: waveMove 30s linear infinite;
+}
+
+@keyframes waveMove {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ================================
+   TOP CARDS (CONTENT LAYER)
+================================ */
+.portfolio-top {
+  position: relative;
+  z-index: 2;             /* ABOVE WAVES */
+  max-width: 1000px;
+  margin: 90px auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+}
+
+.top-card {
+  grid-column: span 6;
+}
+
+/* ================================
+   CARD STYLES
+================================ */
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card__media img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 14px;
+}
+
+.card__title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #1b3645;
+  margin-bottom: 6px;
+}
+
+.card__kicker {
+  font-size: 1rem;
+  color: #1b3645;
+  margin-bottom: 8px;
+}
+
+.logo-inline {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+  margin-left: 3px;
+}
+
+.card__desc {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .top-card {
+    grid-column: span 12;
+  }
+
+  .portfolio-waves {
+    height: 120px;
+  }
+}
+
+/* ————————————————
+   BOTTOM ROW: 4 CARDS
+   (FULL WIDTH)
+——————————————— */
+.portfolio-bottom {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.portfolio-bottom .card {
+  grid-column: span 3;
+}
+
+/* ————————————————
+   CARD STYLE
+——————————————— */
+
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 25px rgba(0,0,0,0.12);
+}
+
+
+
+/* BIGGER IMAGES FOR TOP CARDS */
+.top-card .card__media img {
+  height: 280px;
+}
+
+
+/* FOOTER */
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links i {
+  font-size: 1.4rem;
+  margin-right: 10px;
+}
+
+/* TECH LOGOS (OpenAI / Python style) */
+.badges {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+
+.card__footer .badges img.tech-logo {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+
+/* MOBILE FIX */
+@media(max-width: 900px) {
+  .top-card, .portfolio-bottom .card {
+    grid-column: span 12;
+  }
+}
+
+
+/* PARALLAX SECTION */
+.parallax-section {
+  width: 100%;
+  height: 420px; /* adjust height to match your design */
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-image {
+  background-image: url('assets/parallax.jpeg'); /* ← your image path */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* enables parallax effect */
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.7); /* optional darker overlay */
+}
+
+/* SKILLS SECTION*/
+.skills-banner-section {
+  width: 100%;
+  padding: 60px 0;
+  background: #ffffff;
+  text-align: center;
+}
+
+.skills-banner-heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* KEY FIX */
+.skills-banner-wrapper {
+  width: 100%;
+  max-width: none !important;
+  display: flex;
+  justify-content: center;
+}
+
+/* FULL CONTROL HERE */
+.skills-banner-img {
+  width: 1150px;       /* ← CHANGE THIS FOR WIDTH */
+  height: 400px;        /* ← CHANGE THIS FOR HEIGHT IF NEEDED */
+  display: block;
+  margin: 0 auto;
+  border-radius: 0;
+  object-fit: fill;
+}
+
+/* GALLERY CONTAINER */
+.gallery-container {
+  width: 100%;
+  padding: 60px 0;
+  background: #ffffff;
+}
+
+.gallery-heading {
+  text-align: center;
+  font-size: 2rem;
+  color: #0f1b3d;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+
+
+/* MASONRY LAYOUT */
+.masonry {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  padding: 0 30px;
+}
+
+.masonry-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+
+.masonry-column img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width: 900px) {
+  .masonry {
+    flex-direction: column;
+  }
+}
+
+/* ===== EXACT FOOTER STYLING ===== */
+
+.footer-main {
+  background-color: #1b3645;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.3px;
+  font-weight: 400;
+}
+
+/* Top section */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Avatar */
+.footer-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Email text */
+.footer-email {
+  color: #4ea1ff;
+  font-size: 16px;
+  margin: 0 0 10px 0;
+  font-weight: 400;
+}
+
+/* Icons */
+.footer-icons {
+  display: flex;
+  gap: 18px;
+}
+
+.footer-icons a {
+  color: #4ea1ff;
+  font-size: 22px;
+  text-decoration: none;
+}
+
+/* Bottom strip */
+.footer-bottom {
+  background-color: #162d3a;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 12px 20px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom a {
+  color: #4ea1ff;
+  text-decoration: none;
+}
+.footer-center {
+  justify-content: center;
+  text-align: center;
+}
+
