@@ -891,6 +891,9 @@ footer {
   border-radius: 0;
   display: block;
 }
+.masonry-column:nth-child(2) {
+  justify-content: center;
+}
 
 /* MOBILE RESPONSIVE */
 @media(max-width: 900px) {
@@ -970,4 +973,5 @@ footer {
   justify-content: center;
   text-align: center;
 }
+
 
