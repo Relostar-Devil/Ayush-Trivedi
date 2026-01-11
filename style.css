@@ -874,6 +874,7 @@ footer {
   display: flex;
   gap: 30px;
   justify-content: center;
+  align-items: stretch;
   padding: 0 30px;
 }
 
@@ -892,8 +893,8 @@ footer {
   display: block;
 }
 .masonry-column:nth-child(2) {
-  margin-top: auto;
-  margin-bottom: auto;
+  
+  justify-content: center;
 }
 
 /* MOBILE RESPONSIVE */
@@ -974,6 +975,7 @@ footer {
   justify-content: center;
   text-align: center;
 }
+
 
 
 
